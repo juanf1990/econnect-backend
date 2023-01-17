@@ -5,7 +5,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 //port for my database is 5433
 //database name is discover
 const sequelize = new Sequelize(
-  `postgresql://postgres:RgJlMoBk0SVbVavSG9RZ@containers-us-west-173.railway.app:6209/railway`,
+  `postgresql://postgres:ah3e5kTxpQgv6dOJgaZ0@containers-us-west-184.railway.app:7561/railway`,
   { dialect: "postgres" }
 );
 
@@ -24,8 +24,10 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //connecting to model
-db.users = require("./userModel")(sequelize, DataTypes);
-db.posts = require("./postModel")(sequelize, DataTypes);
+// db.users = require("./models").User;
+
+db.users = require("./models").User;
+db.posts = require("./models").Post;
 
 //exporting the module
 module.exports = db;

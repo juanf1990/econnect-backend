@@ -8,6 +8,6 @@ const router = express.Router();
 
 //post endpoint
 //passing the middleware function to the post
-router.post("/post", userAuth.saveUser, post);
+router.post("/post", userAuth.savePost, post);
 
 module.exports = router;
